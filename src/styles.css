@@ -6,7 +6,8 @@
 
   color-scheme: light dark;
   color: var(--dark-20);
-  background-image: url('/spirited-away-background.png');
+  background-image: image-set(url("/src/assets/images/spirited-away-background.webp") type("image/webp"),
+                              url("/src/assets/images/spirited-away-background.png") type("image/png"));
   background-position: center;
   background-attachment: fixed;
 
@@ -46,9 +47,8 @@ main {
   flex-direction: column;
   align-items: center;
 
-  .spirits {
-    width: 100%;
-    max-width: 327px;
+  .spirits-image {
+    aspect-ratio: 16/9;
   }
 }
 
@@ -183,9 +183,5 @@ section {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-
-    .spirits {
-      max-width: 646px;
-    }
   }
 }
